@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "1d18ba2f91fcb53e245c6b1b5474d182bbcc57a310992afe9019e42366bcb891"
+build_start_time: [1694407136, 468904000]
+build_end_time: [1694407137, 765162000]
+inputs:
+  "/Users/aboelghet/Desktop/ITI \U0001F9D7\U0001F947/HackerRank/HackerRank/main.swift": [1694406918, 953176643]
