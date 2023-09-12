@@ -9,32 +9,19 @@
       "guid" : "98ecf7d04723f80cd215c1606fab309c48d8b431b2f37a5c9bafe87b7036486c"
     }
   ],
-  "containerPath" : "/Users/aboelghet/Desktop/ITI 🧗🥇/iOS Swift/PlayGrounds/HackerRank/HackerRank.xcodeproj",
+  "containerPath" : "/Users/aboelghet/Desktop/ITI 🧗🥇/HackerRank/HackerRank.xcodeproj",
   "continueBuildingAfterErrors" : true,
   "enableIndexBuildArena" : false,
   "hideShellScriptEnvironment" : false,
   "parameters" : {
     "action" : "build",
-    "activeArchitecture" : "arm64",
-    "activeRunDestination" : {
-      "disableOnlyActiveArch" : false,
-      "platform" : "macosx",
-      "sdk" : "macosx13.3",
-      "sdkVariant" : "macos",
-      "supportedArchitectures" : [
-        "arm64e",
-        "arm64",
-        "x86_64"
-      ],
-      "targetArchitecture" : "arm64"
-    },
     "arenaInfo" : {
       "buildIntermediatesPath" : "",
       "buildProductsPath" : "",
       "derivedDataPath" : "/Users/aboelghet/Library/Developer/Xcode/DerivedData",
-      "indexDataStoreFolderPath" : "/Users/aboelghet/Library/Developer/Xcode/DerivedData/HackerRank-eyjfvrehdtabhdejtutxlbjqjwxy/Index.noindex/DataStore",
+      "indexDataStoreFolderPath" : "/Users/aboelghet/Library/Developer/Xcode/DerivedData/HackerRank-byooddktcitepdbppubweblppcdl/Index.noindex/DataStore",
       "indexEnableDataStore" : true,
-      "indexPCHPath" : "/Users/aboelghet/Library/Developer/Xcode/DerivedData/HackerRank-eyjfvrehdtabhdejtutxlbjqjwxy/Index.noindex/PrecompiledHeaders",
+      "indexPCHPath" : "/Users/aboelghet/Library/Developer/Xcode/DerivedData/HackerRank-byooddktcitepdbppubweblppcdl/Index.noindex/PrecompiledHeaders",
       "pchPath" : ""
     },
     "configurationName" : "Debug",

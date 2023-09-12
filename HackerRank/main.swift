@@ -109,24 +109,39 @@ import Foundation
 //}
 //print(timeConversion(s: "07:05:45PM"))
 
+//
+//func findMedian(arr: [Int]) -> Int {
+//
+//    var sortedArr = arr.sorted()
+//    let count = arr.count
+//    guard count > 0 else {
+//        return 0 // Return nil for an empty array
+//    }
+//    if count % 2 == 1 {
+//        // Odd number of elements, return the middle element
+//        return sortedArr[count / 2]
+//
+//    } else {
+//        // Even number of elements, return the average of the two middle elements
+//        let middle1 = sortedArr[count / 2 - 1]
+//        let middle2 = sortedArr[count / 2]
+//        return (middle1 + middle2) / 2
+//
+//    }
+//}
+//print(findMedian(arr: [1,2,3,4,5,6]))
 
-func findMedian(arr: [Int]) -> Int {
+func lonelyinteger(a: [Int]) -> Int {
     
-    var sortedArr = arr.sorted()
-    let count = arr.count
-    guard count > 0 else {
-        return 0 // Return nil for an empty array
+    var result = 0
+    for i in a {
+        result ^= i
     }
-    if count % 2 == 1 {
-        // Odd number of elements, return the middle element
-        return sortedArr[count / 2]
-        
-    } else {
-        // Even number of elements, return the average of the two middle elements
-        let middle1 = sortedArr[count / 2 - 1]
-        let middle2 = sortedArr[count / 2]
-        return (middle1 + middle2) / 2
-        
-    }
+    return result
 }
-print(findMedian(arr: [1,2,3,4,5,6]))
+    
+print(lonelyinteger(a: [1,2,3,4,3,2,1]))
+
+
+
+
