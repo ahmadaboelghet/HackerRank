@@ -142,26 +142,28 @@ import Foundation
 //
 //print(lonelyinteger(a: [1,2,3,4,3,2,1]))
 
-func diagonalDifference(arr: [[Int]])-> Int {
+func diagonalDifference(matrix: [[Int]])-> Int {
     // Write your code here
-    let n = arr.count
-    var firstSum = 0
-    var secondSum = 0
-    
+    let n = matrix.count
+    var primaryDiagonalSum = 0
+    var secondaryDiagonalSum = 0
     
     for i in 0..<n {
-        for j in 0..<n {
-            if i + j >= n / 2 && i + j < (n + n / 2) && abs(i - j) <= n / 2 {
-                firstSum += arr[i][j]
-                secondSum += arr[j][i]
-                return firstSum - secondSum
-            }
-        }
+        primaryDiagonalSum += matrix[i][i]
+        secondaryDiagonalSum += matrix[i][n - 1 - i]
+        return primaryDiagonalSum - secondaryDiagonalSum
+
     }
-    return firstSum - secondSum
+    
+    return primaryDiagonalSum - secondaryDiagonalSum
 }
 
-print(diagonalDifference(arr: [
+
+
+
+
+
+print(diagonalDifference(matrix: [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]]))
