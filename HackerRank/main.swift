@@ -131,17 +131,43 @@ import Foundation
 //}
 //print(findMedian(arr: [1,2,3,4,5,6]))
 
-func lonelyinteger(a: [Int]) -> Int {
-    
-    var result = 0
-    for i in a {
-        result ^= i
-    }
-    return result
-}
-    
-print(lonelyinteger(a: [1,2,3,4,3,2,1]))
+//func lonelyinteger(a: [Int]) -> Int {
+//
+//    var result = 0
+//    for i in a {
+//        result ^= i
+//    }
+//    return result
+//}
+//
+//print(lonelyinteger(a: [1,2,3,4,3,2,1]))
 
+func diagonalDifference(arr: [[Int]])-> Int {
+    // Write your code here
+    let n = arr.count
+    var firstSum = 0
+    var secondSum = 0
+    
+    
+    for i in 0..<n {
+        for j in 0..<n {
+            if i + j >= n / 2 && i + j < (n + n / 2) && abs(i - j) <= n / 2 {
+                firstSum += arr[i][j]
+                secondSum += arr[j][i]
+                return firstSum - secondSum
+            }
+        }
+    }
+    return firstSum - secondSum
+}
+
+print(diagonalDifference(arr: [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]]))
+// 1 2 3
+// 4 5 6
+// 7 8 9
 
 
 
