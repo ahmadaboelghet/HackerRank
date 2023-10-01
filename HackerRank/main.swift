@@ -174,22 +174,40 @@ import Foundation
 
 //print(isPalindrome(121))
 
-func sortArrayByParity(_ nums: [Int]) -> [Int] {
-    var result = [Int]()
-    var evens = [Int]()
-    var odds = [Int]()
+//func sortArrayByParity(_ nums: [Int]) -> [Int] {
+//    var result = [Int]()
+//    var evens = [Int]()
+//    var odds = [Int]()
+//
+//    for num in nums {
+//        if num % 2 == 0 {
+//            evens.append(num)
+//        } else {
+//            odds.append(num)
+//        }
+//    }
+//
+//    result.append(contentsOf: evens)
+//    result.append(contentsOf: odds)
+//
+//    return result
+//}
+//print(sortArrayByParity([3,1,2,4]))
+
+func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    var seen = [Int:Int]()
     
-    for num in nums {
-        if num % 2 == 0 {
-            evens.append(num)
-        } else {
-            odds.append(num)
+    for (index, num) in nums.enumerated() {
+        let diff = target - num
+        
+        if let otherIndex = seen[diff] {
+            return [otherIndex, index]
         }
+        
+        seen[num] = index
     }
     
-    result.append(contentsOf: evens)
-    result.append(contentsOf: odds)
-    
-    return result
+    return []
 }
-print(sortArrayByParity([3,1,2,4]))
+
+print(twoSum([3,2,4], 6))
