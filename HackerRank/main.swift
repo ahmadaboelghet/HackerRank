@@ -142,34 +142,54 @@ import Foundation
 //
 //print(lonelyinteger(a: [1,2,3,4,3,2,1]))
 
-func diagonalDifference(matrix: [[Int]])-> Int {
-    // Write your code here
-    let n = matrix.count
-    var primaryDiagonalSum = 0
-    var secondaryDiagonalSum = 0
-    
-    for i in 0..<n {
-        primaryDiagonalSum += matrix[i][i]
-        secondaryDiagonalSum += matrix[i][n - 1 - i]
-        return primaryDiagonalSum - secondaryDiagonalSum
+//func diagonalDifference(matrix: [[Int]])-> Int {
+//    // Write your code here
+//    let n = matrix.count
+//    var primaryDiagonalSum = 0
+//    var secondaryDiagonalSum = 0
+//
+//    for i in 0..<n {
+//        primaryDiagonalSum += matrix[i][i]
+//        secondaryDiagonalSum += matrix[i][n - 1 - i]
+//        return primaryDiagonalSum - secondaryDiagonalSum
+//
+//    }
+//
+//    return primaryDiagonalSum - secondaryDiagonalSum
+//}
 
-    }
-    
-    return primaryDiagonalSum - secondaryDiagonalSum
-}
-
-
-
-
-
-
-print(diagonalDifference(matrix: [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]]))
+//print(diagonalDifference(matrix: [
+//    [1, 2, 3],
+//    [4, 5, 6],
+//    [7, 8, 9]]))
 // 1 2 3
 // 4 5 6
 // 7 8 9
 
+//func isPalindrome(_ x: Int) -> Bool {
+//      let numberString = String(x)
+//      let reversedNumberString = String(numberString.reversed())
+//      return numberString == reversedNumberString
+//}
 
+//print(isPalindrome(121))
 
+func sortArrayByParity(_ nums: [Int]) -> [Int] {
+    var result = [Int]()
+    var evens = [Int]()
+    var odds = [Int]()
+    
+    for num in nums {
+        if num % 2 == 0 {
+            evens.append(num)
+        } else {
+            odds.append(num)
+        }
+    }
+    
+    result.append(contentsOf: evens)
+    result.append(contentsOf: odds)
+    
+    return result
+}
+print(sortArrayByParity([3,1,2,4]))
